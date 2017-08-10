@@ -12,6 +12,15 @@ var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var isChrome = !!window.chrome && !isOpera;
 var player = document.querySelector('#player');
 
+function hidePageAdd()
+{
+        var ads = document.getElementById("google_companion_ad_div");
+		if(ads){
+				ads.style.display="none";
+		}
+		adbYtLog('hiding page ad');
+}
+
 function skipVideoAd() {
 
     if (document.getElementsByClassName('videoAdUi').length > 0) {
@@ -30,6 +39,7 @@ function hideOverlayAd() {
 }
 
 function clearAds() {
+    hidePageAdd();
     skipVideoAd();
     hideOverlayAd();
 }
