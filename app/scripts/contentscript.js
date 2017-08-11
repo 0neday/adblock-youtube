@@ -12,6 +12,25 @@ var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var isChrome = !!window.chrome && !isOpera;
 var player = document.querySelector('#player');
 
+function removePageAd()
+{
+        var ads01 = document.getElementById("watch7-sidebar-ads");
+		    if(ads01 && ads01.style.display !== 'none'){
+				    ads01.style.display="none";
+				    adbYtLog('removing watch7-sidebar-ads');
+		    }
+		    var ads02 = document.getElementById("watch-channel-brand-div");
+		    if(ads02 && ads02.style.display !== 'none'){
+				    ads02.style.display="none";
+				    adbYtLog('removing watch-channel-brand-div');
+		    }
+		    var ads03 = document.getElementById("google_companion_ad_div");
+		    if(ads03 && ads03.style.display !== 'none'){
+			    	ads03.style.display="none";
+            adbYtLog('removing google_companion_ad_div');
+	    	}
+}
+
 function skipVideoAd() {
 
     if (document.getElementsByClassName('videoAdUi').length > 0) {
@@ -30,6 +49,7 @@ function hideOverlayAd() {
 }
 
 function clearAds() {
+    removePageAd();
     skipVideoAd();
     hideOverlayAd();
 }
