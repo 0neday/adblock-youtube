@@ -52,7 +52,7 @@ function clearAds() {
     skipVideoAd();
     hideOverlayAd();
   	window.setInterval(hidePageAdd,30000);
-	  adbYtLog('timeout 10s');
+	  adbYtLog('timeout 30s');
 }
 
 function DOMSTlistener(e) {
