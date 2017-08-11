@@ -14,10 +14,19 @@ var player = document.querySelector('#player');
 
 function hidePageAdd()
 {
-    var ads = document.getElementById("google_companion_ad_div");
-		if(ads){
-				ads.style.display="none";
+        var ads01 = document.getElementById("watch7-sidebar-ads");
+		if(ads01){
+				ads01.style.display="none";
 		}
+		var ads02 = document.getElementById("watch-channel-brand-div");
+		if(ads02){
+				ads02.style.display="none";
+		}
+		var ads03 = document.getElementById("google_companion_ad_div");
+		if(ads03){
+				ads03.style.display="none";
+		}
+
 		adbYtLog('hiding page ad');
 }
 
